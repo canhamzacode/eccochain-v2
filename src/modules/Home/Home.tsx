@@ -1,4 +1,10 @@
-import { CodeTranslation, HeroSection, Navbar } from '@/components';
+import {
+  CodeTranslation,
+  Features,
+  Footer,
+  HeroSection,
+  Navbar,
+} from '@/components';
 import React from 'react';
 
 const Home = () => {
@@ -13,6 +19,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Features />
+      <Footer />
     </div>
   );
 };

@@ -8,3 +8,5 @@ export * from './CodeTranslation';
 export * from './EditorPanel';
 export * from './TranslateButton';
 export * from './OutputActions';
+export * from './Features';
+export * from './Footer';
