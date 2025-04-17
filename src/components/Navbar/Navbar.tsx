@@ -10,7 +10,7 @@ const Navbar = () => {
           <Image width={88} height={20} src="/logo.png" alt="Logo" />
         </Link>
         <div>
-          <button className="w-[99px] h-[36px] rounded-lg bg-primary text-white text-xs">
+          <button className="w-[99px] h-[36px] rounded-lg bg-[#4954B0] text-white text-xs">
             Get Started
           </button>
         </div>

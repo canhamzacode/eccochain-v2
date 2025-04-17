@@ -4,7 +4,7 @@ import {
   SelectGroup,
   SelectItem,
   SelectTrigger,
-  SelectValue
+  SelectValue,
 } from '../ui/select';
 
 interface ILanguageSelectProps {
@@ -16,9 +16,9 @@ interface ILanguageSelectProps {
 const LanguageSelect = ({
   selectedLanguage,
   setSelectedLanguage,
-  languages
+  languages,
 }: ILanguageSelectProps) => (
-  <div className="w-full h-[44px]  flex items-center justify-center text-black">
+  <div className="w-full h-[44px]  flex items-center justify-center">
     <Select onValueChange={setSelectedLanguage} value={selectedLanguage}>
       <SelectTrigger className="w-full bg-primary-100">
         <SelectValue placeholder="Select a language" />

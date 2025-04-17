@@ -4,3 +4,7 @@ export * from './LanguageSelect';
 export * from './TextArea';
 export * from './TranslationBoxUI';
 export * from './ActionButtons';
+export * from './CodeTranslation';
+export * from './EditorPanel';
+export * from './TranslateButton';
+export * from './OutputActions';

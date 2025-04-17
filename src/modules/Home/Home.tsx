@@ -1,4 +1,4 @@
-import { HeroSection, Navbar } from '@/components';
+import { CodeTranslation, HeroSection, Navbar } from '@/components';
 import React from 'react';
 
 const Home = () => {
@@ -8,7 +8,9 @@ const Home = () => {
         <Navbar />
         <div className="w-full flex flex-col gap-10">
           <HeroSection />
-          <div className="w-full">{/* <CodeTranslation /> */}</div>
+          <div className="w-full pb-[100px]">
+            <CodeTranslation />
+          </div>
         </div>
       </div>
     </div>

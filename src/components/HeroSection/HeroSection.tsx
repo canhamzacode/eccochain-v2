@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center mt-10">
       <button className="rounded-full bg-ecco-darkPurple/30 border-ecco-purple/50 text-ecco-purple hover:bg-ecco-purple/10 hover:text-white mb-12 w-[150px] h-[37px] border md:text-base text-sm">
         build cross-chain
       </button>
