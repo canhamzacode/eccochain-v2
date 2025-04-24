@@ -68,7 +68,7 @@ const Features = () => {
       <div className="w-full bg-[#030619] flex flex-col md:gap-10 gap-5 py-16 ">
         <div className="max-w-[1118px] w-full mx-auto mid-bg">
           <h2 className="tablet:text-3xl text-xl md:text-4xl font-bold text-white text-center leading-tight px-4">
-            EccoChain Translates Smart Contracts and
+            EccoChain Convert Smart Contracts and
             <br />
             Programs{' '}
             <span className="text-gray-400">
