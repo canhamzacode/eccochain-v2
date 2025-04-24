@@ -8,6 +8,9 @@ import {
   FaMagic,
   FaRobot,
 } from 'react-icons/fa';
+import { LuNotebook } from 'react-icons/lu';
+import { PiGitBranchBold } from 'react-icons/pi';
+import { RiToolsFill } from 'react-icons/ri';
 
 const slides = [
   {
@@ -31,6 +34,27 @@ const slides = [
     caption: 'Multi-Language: Solidity, Rust, Move, CosmWasm, and more.',
     icon: <FaCode />,
   },
+  {
+    id: 4,
+    image: '/education.png',
+    alt: 'Multi-Language Support',
+    caption: 'Education: Learn How Rust Works by Example.',
+    icon: <LuNotebook />,
+  },
+  {
+    id: 5,
+    image: '/security.png',
+    alt: 'Multi-Language Support',
+    caption: 'Onchain Safety: Verified, Secure, and Compliant.',
+    icon: <PiGitBranchBold />,
+  },
+  {
+    id: 6,
+    image: '/beginner.png',
+    alt: 'Multi-Language Support',
+    caption: 'Beginner-Friendly: Special Inbuilt Error-Handling Tool.',
+    icon: <RiToolsFill />,
+  },
 ];
 
 const Features = () => {
@@ -40,10 +64,10 @@ const Features = () => {
   const prevSlide = () =>
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
   return (
-    <section className="flex flex-col md:gap-14 gap-10 w-full min-h-screen ">
-      <div className="w-full bg-[#030619] flex flex-col gap-10 py-16">
+    <section className="flex flex-col md:gap-14 gap-10 w-full ">
+      <div className="w-full bg-[#030619] flex flex-col md:gap-10 gap-5 py-16 ">
         <div className="max-w-[1118px] w-full mx-auto mid-bg">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center leading-tight">
+          <h2 className="tablet:text-3xl text-xl md:text-4xl font-bold text-white text-center leading-tight px-4">
             EccoChain Translates Smart Contracts and
             <br />
             Programs{' '}
@@ -54,9 +78,9 @@ const Features = () => {
             <span className="text-gray-400">and more—effortlessly.</span>
           </h2>
         </div>{' '}
-        <div className="bg-features py-10">
-          <div className="max-w-[1118px] w-full mx-auto flex flex-col items-center gap-10">
-            <div className="relative w-full max-w-5xl  rounded-xl ">
+        <div className="md:bg-features py-10">
+          <div className="max-w-[1118px] w-full mx-auto flex flex-col items-center gap-10 px-8">
+            <div className="relative w-full max-w-5xl  rounded-xl">
               <Image
                 src={slides[current].image}
                 alt={slides[current].alt}
@@ -94,12 +118,12 @@ const Features = () => {
             </div>
 
             {/* Captions with icons */}
-            <div className="grid md:grid-cols-3 grid-cols-1 gap-6 text-center w-full px-8">
+            <div className="grid md:grid-cols-3 grid-cols-1 md:gap-6 gap-2 text-center w-full md:px-8">
               {slides.map((slide, index) => (
                 <div
                   key={slide.id}
                   onClick={() => setCurrent(index)}
-                  className={`cursor-pointer transition-all px-4 py-2 rounded-lg flex text-left gap-3 ${
+                  className={`cursor-pointer transition-all md:px-4 py-2 rounded-lg flex text-left gap-3 ${
                     current === index
                       ? 'text-white font-semibold'
                       : 'text-gray-400'
@@ -122,7 +146,7 @@ const Features = () => {
             </div>
 
             {/* CTA */}
-            <button className="bg-[#4954B0] hover:bg-primary-400 transition text-white w-[189px] h-[60px] px-6 py-3 rounded-lg font-semibold text-base">
+            <button className="bg-[#4954B0] hover:bg-primary-400 transition text-white md:w-[189px] w-full h-[60px] px-6 py-3 rounded-lg font-semibold text-base">
               Try for free
             </button>
           </div>

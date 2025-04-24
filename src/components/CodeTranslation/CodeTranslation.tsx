@@ -4,7 +4,6 @@ import { LiaExchangeAltSolid } from 'react-icons/lia';
 import { EditorPanel } from '../EditorPanel';
 import { TranslateButton } from '../TranslateButton';
 import { OutputActions } from '../OutputActions';
-import { languageOptions } from '@/constants';
 import { useCodeTranslator } from '@/hooks';
 
 const CodeTranslation = () => {
@@ -41,7 +40,16 @@ const CodeTranslation = () => {
           setSelectedLanguage={setFromLanguage}
           code={inputCode}
           setCode={setInputCode}
-          languages={languageOptions}
+          languages={[
+            {
+              label: 'Rust',
+              value: 'rust',
+            },
+            {
+              label: 'Solidity',
+              value: 'solidity',
+            },
+          ]}
         />
         <TranslateButton onClick={handleTranslate} />
       </div>
@@ -53,7 +61,16 @@ const CodeTranslation = () => {
           setSelectedLanguage={setToLanguage}
           code={translatedCode}
           setCode={setTranslatedCode}
-          languages={languageOptions}
+          languages={[
+            {
+              label: 'Solidity',
+              value: 'solidity',
+            },
+            {
+              label: 'Rust',
+              value: 'rust',
+            },
+          ]}
         />
         <OutputActions onExport={handleExport} onCopy={handleCopy} />
       </div>
