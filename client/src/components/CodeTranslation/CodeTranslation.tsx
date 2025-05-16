@@ -5,6 +5,7 @@ import { EditorPanel } from '../EditorPanel';
 import { TranslateButton } from '../TranslateButton';
 import { OutputActions } from '../OutputActions';
 import { useCodeTranslator } from '@/hooks';
+import { languageOptions } from '@/lib/language';
 
 const CodeTranslation = () => {
   const {
@@ -20,6 +21,7 @@ const CodeTranslation = () => {
     handleExport,
     handleCopy,
     swapLanguages,
+    loading,
   } = useCodeTranslator();
 
   return (
@@ -40,18 +42,9 @@ const CodeTranslation = () => {
           setSelectedLanguage={setFromLanguage}
           code={inputCode}
           setCode={setInputCode}
-          languages={[
-            {
-              label: 'Rust',
-              value: 'rust',
-            },
-            {
-              label: 'Solidity',
-              value: 'solidity',
-            },
-          ]}
+          languages={languageOptions}
         />
-        <TranslateButton onClick={handleTranslate} />
+        <TranslateButton loading={loading} onClick={handleTranslate} />
       </div>
 
       <div>
@@ -61,16 +54,7 @@ const CodeTranslation = () => {
           setSelectedLanguage={setToLanguage}
           code={translatedCode}
           setCode={setTranslatedCode}
-          languages={[
-            {
-              label: 'Solidity',
-              value: 'solidity',
-            },
-            {
-              label: 'Rust',
-              value: 'rust',
-            },
-          ]}
+          languages={languageOptions}
         />
         <OutputActions onExport={handleExport} onCopy={handleCopy} />
       </div>
