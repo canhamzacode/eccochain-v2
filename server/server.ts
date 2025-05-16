@@ -15,5 +15,5 @@ server.use("/api", appRoutes);
 
 server.listen(PORT, () => {
   logger.info(`Server is running on port ${PORT}`);
-  DB();
+  // DB();
 });
