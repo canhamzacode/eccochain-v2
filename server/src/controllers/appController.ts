@@ -3,9 +3,9 @@ import getCodeFromPrompt from "@/codeCommand/AiPrompter";
 
 export const translateCode = async (req: Request, res: Response) => {
 	try {
-		const { code, language } = req.body;
+		const { code, fromLanguage, toLanguage } = req.body;
 
-		const text = `Change this code\n ${code}\n to ${language}`;
+		const text = `Change this ${fromLanguage} code to ${toLanguage} code\n ${code}\n`;
 
 		const aiResponse = await getCodeFromPrompt(text);
 
