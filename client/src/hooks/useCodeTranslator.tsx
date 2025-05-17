@@ -24,17 +24,20 @@ const useCodeTranslator = () => {
 
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/translate', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          code: inputCode,
-          fromLanguage,
-          toLanguage,
-        }),
-      });
+      const response = await fetch(
+        'https://eccochain.onrender.com/api/translate',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            code: inputCode,
+            fromLanguage,
+            toLanguage,
+          }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error('Translation failed. Please try again.');
